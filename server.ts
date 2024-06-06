@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import userRouter from "./routes/user";
 import listRouter from "./routes/list";
+import taskRouter from "./routes/task";
 
 dotenv.config();
 
@@ -22,11 +23,10 @@ app.get("/", (req: Request, res: Response) => {
   	res.send("Hello World!");
 });
 
-// -----[ PARA SA USER ]-----
+// -----[ ROUTERS ]-----
 app.use("/user", userRouter);
-
-// -----[ PARA SA LIST ]-----
 app.use("/list", listRouter);
+app.use("/task", taskRouter);
 
 // -----[ PARA SA CONSOLE LOG ]-----
 app.listen(port, () => {
