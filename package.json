@@ -2,12 +2,12 @@
   "name": "its320-finals-be",
   "version": "1.0.0",
   "description": "ITS320 Web Systems Technology (Finals)",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx prisma generate && npx tsc",
-    "start": "node dist/index.js",
-    "dev": "nodemon index.ts"
+    "start": "node dist/server.js",
+    "dev": "nodemon server.ts"
   },
   "keywords": [],
   "author": "",

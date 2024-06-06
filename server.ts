@@ -2,6 +2,7 @@ import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import userRouter from "./routes/user";
+import listRouter from "./routes/list";
 
 dotenv.config();
 
@@ -23,6 +24,9 @@ app.get("/", (req: Request, res: Response) => {
 
 // -----[ PARA SA USER ]-----
 app.use("/user", userRouter);
+
+// -----[ PARA SA LIST ]-----
+app.use("/list", listRouter);
 
 // -----[ PARA SA CONSOLE LOG ]-----
 app.listen(port, () => {
