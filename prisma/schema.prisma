@@ -5,17 +5,33 @@
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
 generator client {
-  provider = "prisma-client-js"
+	provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "mongodb"
-  url      = env("DATABASE_URL")
+	provider = "mongodb"
+	url      = env("DATABASE_URL")
 }
 
 model User {
-  id       String @id @default(auto()) @map("_id") @db.ObjectId
-  username String
-  email    String
-  password String
+	id       String @id @default(auto()) @map("_id") @db.ObjectId
+	username String
+	email    String
+	password String
+	lists    List[] @relation("userList")
+}
+
+model List {
+	id      String @id @default(auto()) @map("_id") @db.ObjectId
+	title   String
+	user_id String @db.ObjectId
+	user    User   @relation(fields: [user_id], references: [id], name: "userList")
+	tasks   Task[] @relation("listTask")
+}
+
+model Task {
+	id          String @id @default(auto()) @map("_id") @db.ObjectId
+	list_id     String @db.ObjectId
+	list        List   @relation(fields: [list_id], references: [id], name: "listTask")
+	description String
 }
