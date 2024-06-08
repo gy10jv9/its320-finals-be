@@ -1,5 +1,5 @@
 import { Router } from "express"
-import { adduser } from "../controllers/user"
+import { adduser, deleteUser } from "../controllers/user"
 
 const userRouter = Router()
 
@@ -13,5 +13,9 @@ userRouter.post("/add", async (req, res) => {
     console.log(`[server]: Successfully added ${JSON.stringify(addedUser)}`)
     return res.json(addedUser)
 })
+userRouter.delete("/delete", (req, res) => {
+    let user = req.body.user as string;
+    deleteUser(user);
+});
 
 export default userRouter
