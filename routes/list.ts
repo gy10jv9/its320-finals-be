@@ -1,5 +1,5 @@
 import { Router } from "express"
-import { addlist } from "../controllers/list"
+import { addlist, deleteList } from "../controllers/list"
 
 const listRouter = Router()
 
@@ -12,6 +12,10 @@ listRouter.post("/add", async (req, res) => {
     let addedList = await addlist(payload)
     
     return res.json(addedList)
+})
+listRouter.delete("/delete/:list_id", async (req, res) => {
+    let list_id = req.params.list_id
+    deleteList(list_id)
 })
 
 export default listRouter

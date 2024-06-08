@@ -2,7 +2,7 @@
     "clientName": "Thunder Client",
     "collectionName": "its320-finals-be",
     "collectionId": "0f1648fc-bdd1-495d-aaff-78b6a633f667",
-    "dateExported": "2024-06-08T10:06:08.003Z",
+    "dateExported": "2024-06-08T10:37:42.891Z",
     "version": "1.2",
     "folders": [
         {
@@ -11,6 +11,20 @@
             "containerId": "",
             "created": "2024-06-08T10:05:32.228Z",
             "sortNum": 10000
+        },
+        {
+            "_id": "46670bd2-dbfe-48e9-87ac-69f2f711dffa",
+            "name": "List",
+            "containerId": "",
+            "created": "2024-06-08T10:32:05.945Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "f09de0e4-d4c6-490f-a22c-a31560cd67b9",
+            "name": "Task",
+            "containerId": "",
+            "created": "2024-06-08T10:32:14.617Z",
+            "sortNum": 30000
         }
     ],
     "requests": [
@@ -23,11 +37,45 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-06-08T09:40:19.753Z",
-            "modified": "2024-06-08T09:40:19.753Z",
+            "modified": "2024-06-08T10:32:42.616Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"username\": \"todelete\",\n  \"email\": \"test@email.com\",\n  \"password\": \"test\"\n}",
+                "raw": "{\n  \"username\": \"test\",\n  \"email\": \"test@email.com\",\n  \"password\": \"test\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "f852f6a2-1749-4fb9-9400-372dfe5686df",
+            "colId": "0f1648fc-bdd1-495d-aaff-78b6a633f667",
+            "containerId": "46670bd2-dbfe-48e9-87ac-69f2f711dffa",
+            "name": "Add List",
+            "url": "localhost:3000/list/add",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-06-08T09:49:45.974Z",
+            "modified": "2024-06-08T10:33:53.142Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"list title todelete 1\",\n  \"user_id\": \"6664334ac12bbd8f279ebb69\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "420258d9-264d-45d0-80ca-e84a78d8ff7b",
+            "colId": "0f1648fc-bdd1-495d-aaff-78b6a633f667",
+            "containerId": "f09de0e4-d4c6-490f-a22c-a31560cd67b9",
+            "name": "Add Task",
+            "url": "localhost:3000/task/add",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-06-08T10:05:19.571Z",
+            "modified": "2024-06-08T10:34:19.128Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"description\": \"to be deleted 4\",\n  \"list_id\": \"66643394be2194287f82202a\"\n}",
                 "form": []
             }
         },
@@ -49,39 +97,39 @@
             }
         },
         {
-            "_id": "f852f6a2-1749-4fb9-9400-372dfe5686df",
+            "_id": "ff98dfec-d2ad-4e94-a749-861e2ee6ab0e",
             "colId": "0f1648fc-bdd1-495d-aaff-78b6a633f667",
-            "containerId": "",
-            "name": "Add List",
-            "url": "localhost:3000/list/add",
-            "method": "POST",
-            "sortNum": 30000,
-            "created": "2024-06-08T09:49:45.974Z",
-            "modified": "2024-06-08T09:49:45.974Z",
+            "containerId": "f09de0e4-d4c6-490f-a22c-a31560cd67b9",
+            "name": " Delete Task",
+            "url": "localhost:3000/list/delete/66643394be2194287f82202a",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2024-06-08T10:34:38.719Z",
+            "modified": "2024-06-08T10:37:28.928Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"title\": \"list title 1\",\n  \"id\": \"6661655823b4cdb79ca8d1ab\"\n}",
+                "raw": "{\n  \"user\": \"66642115321989d784a77353\"\n}",
                 "form": []
             }
         },
         {
-            "_id": "420258d9-264d-45d0-80ca-e84a78d8ff7b",
+            "_id": "0d3b241e-c9e6-4e42-bc53-b8d5b943cebf",
             "colId": "0f1648fc-bdd1-495d-aaff-78b6a633f667",
-            "containerId": "",
-            "name": "Add Task",
-            "url": "localhost:3000/task/add",
-            "method": "POST",
-            "sortNum": 40000,
-            "created": "2024-06-08T10:05:19.571Z",
-            "modified": "2024-06-08T10:05:19.571Z",
+            "containerId": "46670bd2-dbfe-48e9-87ac-69f2f711dffa",
+            "name": " Delete List",
+            "url": "localhost:3000/task/delete/666433aabe2194287f82202e",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2024-06-08T10:36:52.323Z",
+            "modified": "2024-06-08T10:36:52.323Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"description\": \"to be deleted 2\",\n  \"list_id\": \"666429a99478cff47c5ebd90\"\n}",
+                "raw": "{\n  \"user\": \"66642115321989d784a77353\"\n}",
                 "form": []
             }
         }
     ],
-    "ref": "otWAsK-TDGQgAA6dZXmzbQ4oTuaVB2SeZreT_vuqilEeLX5opbAICwfJFujlvxiTqGQ5ZodEi_c87BwWbrmfPQ"
+    "ref": "otWAsK-TDGQgAA6dZXmzbWfAnH1T_oHCUfXlMnW5xvXLTe3Z6awxmE0t43pxWcJeKNEqbeucm5G2IOpx7WRYcQ"
 }

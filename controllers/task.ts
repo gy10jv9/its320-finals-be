@@ -15,3 +15,14 @@ export const addtask = async (payload: any) => {
     console.log(`[server]: Successfully added task: ${JSON.stringify(query)}`)
     return query
 }
+
+export const deleteTask = async (task_id: string) => {
+    let query = await prisma.task.delete({
+        where: {
+            id: task_id
+        }
+    })
+
+    console.log(`[server]: Successfully deleted task: ${JSON.stringify(query)}`)
+    return query
+}
