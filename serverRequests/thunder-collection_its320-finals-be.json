@@ -1,0 +1,45 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "its320-finals-be",
+    "collectionId": "0f1648fc-bdd1-495d-aaff-78b6a633f667",
+    "dateExported": "2024-06-08T09:46:49.263Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "a72cb07b-d46d-438e-b290-f33d78a6644f",
+            "colId": "0f1648fc-bdd1-495d-aaff-78b6a633f667",
+            "containerId": "",
+            "name": "localhost:3000/user/add",
+            "url": "localhost:3000/user/delete",
+            "method": "DELETE",
+            "sortNum": 10000,
+            "created": "2024-06-08T09:37:33.297Z",
+            "modified": "2024-06-08T09:37:33.297Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"user\": \"66642115321989d784a77353\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "016db637-f0a4-482d-b2b5-4d9f4ee80925",
+            "colId": "0f1648fc-bdd1-495d-aaff-78b6a633f667",
+            "containerId": "",
+            "name": "Add User",
+            "url": "localhost:3000/user/add",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-06-08T09:40:19.753Z",
+            "modified": "2024-06-08T09:40:19.753Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"todelete\",\n  \"email\": \"test@email.com\",\n  \"password\": \"test\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "otWAsK-TDGQgAA6dZXmzbVW-akqqYSe69vSxIQQURUMK0VlsOfEr6FGipR3M899yG3YIxpuZZNnWLY1xdGsoVw"
+}
