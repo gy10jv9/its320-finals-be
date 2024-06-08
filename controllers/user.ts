@@ -31,7 +31,28 @@ export const deleteUser = async (user: string) => {
     }
 
     if (existingUser) {
-        // Delete the user from the database
+        const userLists = await prisma.list.findMany({
+            where: {
+                user_id: existingUser.id,
+            },
+        });
+        
+        //  para mag delete sng tasks nga related sa list
+        for (const list of userLists) {
+            await prisma.task.deleteMany({
+                where: {
+                    list_id: list.id,
+                },
+            });
+        }
+        
+        // para mag delete sng list nga related sa user
+        await prisma.list.deleteMany({
+            where: {
+                user_id: existingUser.id,
+            },
+        });
+        
         await prisma.user.delete({
             where: {
                 id: existingUser.id

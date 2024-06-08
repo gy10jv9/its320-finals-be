@@ -12,5 +12,6 @@ export const addtask = async (payload: any) => {
         }
     })
     
+    console.log(`[server]: Successfully added task: ${JSON.stringify(query)}`)
     return query
 }

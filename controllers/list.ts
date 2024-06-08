@@ -12,5 +12,6 @@ export const addlist = async (payload: any) => {
         }
     })
     
+    console.log(`[server]: Successfully added list: ${JSON.stringify(query)}`)
     return query
 }

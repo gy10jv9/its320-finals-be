@@ -10,8 +10,7 @@ listRouter.get("/", (req, res) => {
 listRouter.post("/add", async (req, res) => {
     let payload = req.body
     let addedList = await addlist(payload)
-
-    console.log(`[server]: Successfully added ${JSON.stringify(addedList)}`)
+    
     return res.json(addedList)
 })
 

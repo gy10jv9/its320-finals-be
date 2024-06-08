@@ -11,7 +11,6 @@ taskRouter.post("/add", async (req, res) => {
     let payload = req.body
     let addedtask = await addtask(payload)
 
-    console.log(`[server]: Successfully added ${JSON.stringify(addedtask)}`)
     return res.json(addedtask)
 })
 
