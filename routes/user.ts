@@ -1,5 +1,5 @@
 import { Router } from "express"
-import { adduser, deleteUser } from "../controllers/user"
+import { adduser, deleteUser, login } from "../controllers/user"
 
 const userRouter = Router()
 
@@ -12,6 +12,13 @@ userRouter.post("/add", async (req, res) => {
 
     console.log(`[server]: Successfully added ${JSON.stringify(addedUser)}`)
     return res.json(addedUser)
+})
+userRouter.get("/login", async (req, res) => {
+    let payload = req.body
+    let loginStatus = await login(payload)
+
+    console.log(`[server]: Login status: ${loginStatus}`)
+    return res.json(loginStatus)
 })
 userRouter.delete("/delete", (req, res) => {
     let user = req.body.user as string;

@@ -5,12 +5,26 @@ export const adduser = async (payload: any) => {
     let query = await prisma.user.create({
         data: {
             username: payload.username,
-            email: payload.email,
             password: payload.password
         }
     })
     
     return query
+}
+
+export const login = async (payload: any) => {
+    if (!payload.username || !payload.password) {
+        return 0;
+    }
+
+    let query = await prisma.user.findFirst({
+        where: {
+            username: payload.username,
+            password: payload.password
+        }
+    })
+
+    return query ? 1 : 0;
 }
 
 export const deleteUser = async (user: string) => {

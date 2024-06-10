@@ -2,7 +2,7 @@
     "clientName": "Thunder Client",
     "collectionName": "its320-finals-be",
     "collectionId": "0f1648fc-bdd1-495d-aaff-78b6a633f667",
-    "dateExported": "2024-06-08T10:37:42.891Z",
+    "dateExported": "2024-06-10T04:06:20.755Z",
     "version": "1.2",
     "folders": [
         {
@@ -37,11 +37,11 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-06-08T09:40:19.753Z",
-            "modified": "2024-06-08T10:32:42.616Z",
+            "modified": "2024-06-10T03:42:13.885Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"username\": \"test\",\n  \"email\": \"test@email.com\",\n  \"password\": \"test\"\n}",
+                "raw": "{\n  \"username\": \"test\",\n  \"password\": \"test\"\n}",
                 "form": []
             }
         },
@@ -129,7 +129,24 @@
                 "raw": "{\n  \"user\": \"66642115321989d784a77353\"\n}",
                 "form": []
             }
+        },
+        {
+            "_id": "c40eb1ae-9ed3-4c68-ac07-e8b62b341abd",
+            "colId": "0f1648fc-bdd1-495d-aaff-78b6a633f667",
+            "containerId": "cae09109-db70-44f5-8aa7-254109e20adc",
+            "name": "Login User",
+            "url": "localhost:3000/user/login",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-06-10T04:06:13.733Z",
+            "modified": "2024-06-10T04:06:13.733Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"angulartest\",\n  \"password\": \"angulartest\"\n}",
+                "form": []
+            }
         }
     ],
-    "ref": "otWAsK-TDGQgAA6dZXmzbWfAnH1T_oHCUfXlMnW5xvXLTe3Z6awxmE0t43pxWcJeKNEqbeucm5G2IOpx7WRYcQ"
+    "ref": "otWAsK-TDGQgAA6dZXmzbbdivoyugfHnBjum6GA4o6TgEfALIq_bHKoDV1sj3jlsQxzvps86znn7QlBm0uJqoQ"
 }
