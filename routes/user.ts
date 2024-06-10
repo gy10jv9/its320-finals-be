@@ -13,8 +13,9 @@ userRouter.post("/add", async (req, res) => {
     console.log(`[server]: Successfully added ${JSON.stringify(addedUser)}`)
     return res.json(addedUser)
 })
-userRouter.get("/login", async (req, res) => {
+userRouter.post("/login", async (req, res) => {
     let payload = req.body
+    console.log(`[server]: Routing: ${JSON.stringify(payload)}...`)
     let loginStatus = await login(payload)
 
     console.log(`[server]: Login status: ${loginStatus}`)

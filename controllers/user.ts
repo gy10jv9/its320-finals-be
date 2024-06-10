@@ -13,6 +13,8 @@ export const adduser = async (payload: any) => {
 }
 
 export const login = async (payload: any) => {
+    console.log(`[server]: Logging in ${JSON.stringify(payload)}...`)
+
     if (!payload.username || !payload.password) {
         return 0;
     }
