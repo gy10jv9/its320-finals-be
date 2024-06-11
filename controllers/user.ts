@@ -26,7 +26,7 @@ export const login = async (payload: any) => {
         }
     })
 
-    return query ? 1 : 0;
+    return query ? query.id : null;
 }
 
 export const deleteUser = async (user: string) => {

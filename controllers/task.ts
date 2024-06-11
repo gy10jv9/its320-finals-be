@@ -1,6 +1,6 @@
 import prisma from "../library/prisma";
 
-export const addtask = async (payload: any) => {
+export const saveTask = async (payload: any) => {
     let query = await prisma.task.create({
         data: {
             description: payload.description,
