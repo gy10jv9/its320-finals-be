@@ -12,7 +12,7 @@ const port = process.env.PORT || 3000;
 
 // -----[ PARA SA CORS ]-----
 app.use(cors({
-    origin: ['http://localhost:4200', 'https://its320-finals-be.onrender.com'],
+    origin: ['http://localhost:4200', 'https://its320-finals-be.onrender.com', 'https://angular-juneco-brown.vercel.app'],
     allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
 }));
