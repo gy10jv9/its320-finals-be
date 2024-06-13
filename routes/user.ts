@@ -21,8 +21,8 @@ userRouter.post("/login", async (req, res) => {
     console.log(`[server]: Login status: ${loginStatus}`)
     return res.json(loginStatus)
 })
-userRouter.delete("/delete", (req, res) => {
-    let user = req.body.user as string;
+userRouter.delete("/delete/:user_id", (req, res) => {
+    let user = req.params.user_id as string;
     deleteUser(user);
 });
 
